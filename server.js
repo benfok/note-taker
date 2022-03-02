@@ -2,6 +2,8 @@ const express = require('express');
 const api = require('./routes/index.js');
 const path = require('path');
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 
 // middleware
@@ -33,6 +35,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log('Server is Up!');
 });
