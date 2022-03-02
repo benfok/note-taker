@@ -18,15 +18,34 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuidv4(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, './db/db.json');
     res.json('Note added successfully!');
+    console.log('Note added');
   } else {
     res.error('Error in adding note');
   }
 });
 
+// DELETE Route for a specific tip
+notes.delete('/:id', (req, res) => {
+  const noteId = req.params.id;
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      // Make a new array of all notes except the one with the ID provided in the URL
+      const result = json.filter((note) => note.id !== noteId);
+      // Save that array to the filesystem
+      writeToFile('./db/db.json', result);
+
+      // Respond to the DELETE request
+      res.json(`Item ${noteId} has been deleted.`);
+    })
+    .catch((err) => {
+      console.log(`Error in deleting note\n${err}`);
+    })
+});
 
 module.exports = notes;
