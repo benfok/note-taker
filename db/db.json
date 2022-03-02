@@ -5,8 +5,23 @@
         "id": "90a49063-b5c3-4f53-925d-c72dfd307cb7"
     },
     {
-        "title": "Homework",
-        "text": "Complete the Note Taker homework by Wednesday end of day",
-        "id": "9d40005c-0396-4dfa-9ab0-0efbdc768faf"
+        "title": "Finish Homework",
+        "text": "Complete page styling\nDeploy to Heroku\nConfigure ReadMe file",
+        "id": "7590a979-3eb2-45e4-b860-e9565146579d"
+    },
+    {
+        "title": "Tidy Garage",
+        "text": "Put away tools\nCoil pressure hose\nSweep",
+        "id": "ce17d03f-7726-4572-af78-88e5537aa848"
+    },
+    {
+        "title": "Call City",
+        "text": "Re: Trash pickup",
+        "id": "f259e399-4251-4980-b4cd-db9df5a9bcf8"
+    },
+    {
+        "title": "Put Up Shelves",
+        "text": "In upstairs bathroom",
+        "id": "f9a0c240-a8d3-4b98-b52b-ae2de59d898b"
     }
 ]
