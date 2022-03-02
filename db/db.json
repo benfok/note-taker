@@ -4,23 +4,13 @@
         "text": "Test text"
     },
     {
-        "title": "Feed the chickens",
-        "text": "Take food to them\n",
-        "id": "ec1950f4-e72f-4448-a893-3ee6a9f80b65"
-    },
-    {
         "title": "Snowmobiles",
         "text": "Change the spark plugs\nChange oil\nInstall scratchers",
         "id": "90a49063-b5c3-4f53-925d-c72dfd307cb7"
     },
     {
-        "title": "Liverpool",
-        "text": "Watch game\n",
-        "id": "64f39526-fc9a-4666-ada4-1690a2124fd3"
-    },
-    {
-        "title": "Recycling",
-        "text": "Take out the recycling",
-        "id": "b63d92b6-39fd-4f9e-85a4-7990ee7d3a29"
+        "title": "Homework",
+        "text": "Complete the Note Taker homework by Wednesday end of day",
+        "id": "9d40005c-0396-4dfa-9ab0-0efbdc768faf"
     }
 ]
