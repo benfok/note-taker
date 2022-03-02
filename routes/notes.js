@@ -1,16 +1,19 @@
 const notes = require('express').Router();
 // module to generate unique ID numbers
 const { v4: uuidv4 } = require('uuid');
+// call in helper functions
 const {
     readFromFile,
     readAndAppend,
     writeToFile,
   } = require('../helpers/utils');
 
+// GET route: read from db.json file
 notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+// POST route: Confirm request body contains data that is needed, add unique id and then append to db.json. Return note in response.
 notes.post('/', (req, res) => {
   const { title, text } = req.body;
 
@@ -28,7 +31,7 @@ notes.post('/', (req, res) => {
   }
 });
 
-// DELETE Route for a specific tip
+// DELETE Route for a specific note
 notes.delete('/:id', (req, res) => {
   const noteId = req.params.id;
   readFromFile('./db/db.json')

@@ -2,6 +2,7 @@ const express = require('express');
 const api = require('./routes/index.js');
 const path = require('path');
 
+// setting up port for heroku with local alternative
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -13,7 +14,6 @@ app.use(express.static('public'));
 app.use('/api', api);
 
 // Routes
-
 // GET Route for homepage
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
